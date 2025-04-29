@@ -1,15 +1,22 @@
-import React from "react";
-import Table from "./components/Table";
+import VideoPlayer from './components/VideoPlayer';
+import BackgroundMusicInput from './components/BackgroundMusicInput';
+import SubtitlesEditor from './components/SubtitlesEditor';
+import ImageOverlayEditor from './components/ImageOverlayEditor';
+import RenderControls from './components/RenderControls';
+import VideoEditor from "./components/VideoEditor";
 
-const App = () => {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="w-full max-w-4xl">
-        <h1 className="text-6xl font-bold text-pink-900  text-center mb-6">Cloudify Table</h1>
-        <Table />
-      </div>
+    <div className="min-h-screen bg-gray-100 p-4 space-y-4">
+      <h1 className="text-3xl font-bold text-center">🎬 Video Editor</h1>
+      {/* <VideoEditor /> */}
+      <VideoPlayer />
+      <BackgroundMusicInput />
+      <SubtitlesEditor />
+      <ImageOverlayEditor />
+      <RenderControls />
     </div>
   );
-};
+}
 
 export default App;
